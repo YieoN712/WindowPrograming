@@ -1,0 +1,5 @@
+﻿  WarmingUp.cpp
+C:\Users\yieon\Desktop\winpro\warming up\warming up2\WarmingUp.cpp(33,18): warning C4101: 'max' :참조되지 않은 지역 변수입니다.
+C:\Users\yieon\Desktop\winpro\warming up\warming up2\WarmingUp.cpp(33,7): warning C4101: 'rnum' :참조되지 않은 지역 변수입니다.
+C:\Users\yieon\Desktop\winpro\warming up\warming up2\WarmingUp.cpp(33,13): warning C4101: 'min' :참조되지 않은 지역 변수입니다.
+  warming up2.vcxproj -> C:\Users\yieon\Desktop\winpro\warming up\x64\Debug\warming up2.exe
