@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\WinPro\\WindowPrograming\\Project1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5C00904-A687-4AFD-972B-162B5D535409}|Project1-1\\Project1-1.vcxproj|C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\FileName.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E5C00904-A687-4AFD-972B-162B5D535409}|Project1-1\\Project1-1.vcxproj|solutionrelative:Project1-1\\FileName.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E5C00904-A687-4AFD-972B-162B5D535409}|Project1-1\\Project1-1.vcxproj|C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E5C00904-A687-4AFD-972B-162B5D535409}|Project1-1\\Project1-1.vcxproj|solutionrelative:Project1-1\\Project 1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,12 +19,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FileName.c",
-              "DocumentMoniker": "C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\FileName.c",
-              "RelativeDocumentMoniker": "Project1-1\\FileName.c",
-              "ToolTip": "C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\FileName.c",
-              "RelativeToolTip": "Project1-1\\FileName.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Project 1.c",
+              "DocumentMoniker": "C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.c",
+              "RelativeDocumentMoniker": "Project1-1\\Project 1.c",
+              "ToolTip": "C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.c",
+              "RelativeToolTip": "Project1-1\\Project 1.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-03-17T00:29:47.909Z",
               "EditorCaption": ""
