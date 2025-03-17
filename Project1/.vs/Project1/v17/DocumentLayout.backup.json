@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\WinPro\\WindowPrograming\\Project1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Project1-1\\Project 1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E5C00904-A687-4AFD-972B-162B5D535409}|Project1-1\\Project1-1.vcxproj|C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E5C00904-A687-4AFD-972B-162B5D535409}|Project1-1\\Project1-1.vcxproj|solutionrelative:Project1-1\\Project 1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +19,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Project 1.c",
-              "DocumentMoniker": "C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.c",
-              "RelativeDocumentMoniker": "Project1-1\\Project 1.c",
-              "ToolTip": "C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.c",
-              "RelativeToolTip": "Project1-1\\Project 1.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "Title": "Project 1.cpp",
+              "DocumentMoniker": "C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.cpp",
+              "RelativeDocumentMoniker": "Project1-1\\Project 1.cpp",
+              "ToolTip": "C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.cpp",
+              "RelativeToolTip": "Project1-1\\Project 1.cpp",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-17T00:29:47.909Z",
               "EditorCaption": ""
             }
