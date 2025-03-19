@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\WinPro\\WindowPrograming\\Project1\\",
+  "WorkspaceRootPath": "C:\\WndPro\\WindowPrograming\\Project1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5C00904-A687-4AFD-972B-162B5D535409}|Project1-1\\Project1-1.vcxproj|C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{E5C00904-A687-4AFD-972B-162B5D535409}|Project1-1\\Project1-1.vcxproj|C:\\WndPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E5C00904-A687-4AFD-972B-162B5D535409}|Project1-1\\Project1-1.vcxproj|solutionrelative:Project1-1\\Project 1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5C00904-A687-4AFD-972B-162B5D535409}|Project1-1\\Project1-1.vcxproj|C:\\WndPro\\WindowPrograming\\Project1\\Project1-1\\Project 2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E5C00904-A687-4AFD-972B-162B5D535409}|Project1-1\\Project1-1.vcxproj|solutionrelative:Project1-1\\Project 2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5C00904-A687-4AFD-972B-162B5D535409}|Project1-1\\Project1-1.vcxproj|C:\\WndPro\\WindowPrograming\\Project1\\Project1-1\\Project 3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E5C00904-A687-4AFD-972B-162B5D535409}|Project1-1\\Project1-1.vcxproj|solutionrelative:Project1-1\\Project 3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,13 +28,39 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Project 1.cpp",
-              "DocumentMoniker": "C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.cpp",
+              "DocumentMoniker": "C:\\WndPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.cpp",
               "RelativeDocumentMoniker": "Project1-1\\Project 1.cpp",
-              "ToolTip": "C:\\WinPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.cpp",
+              "ToolTip": "C:\\WndPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.cpp",
               "RelativeToolTip": "Project1-1\\Project 1.cpp",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwDUAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAuwCUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-17T00:29:47.909Z",
+              "WhenOpened": "2025-03-19T00:33:47.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Project 2.cpp",
+              "DocumentMoniker": "C:\\WndPro\\WindowPrograming\\Project1\\Project1-1\\Project 2.cpp",
+              "RelativeDocumentMoniker": "Project1-1\\Project 2.cpp",
+              "ToolTip": "C:\\WndPro\\WindowPrograming\\Project1\\Project1-1\\Project 2.cpp",
+              "RelativeToolTip": "Project1-1\\Project 2.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwCMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-19T00:38:31.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Project 3.cpp",
+              "DocumentMoniker": "C:\\WndPro\\WindowPrograming\\Project1\\Project1-1\\Project 3.cpp",
+              "RelativeDocumentMoniker": "Project1-1\\Project 3.cpp",
+              "ToolTip": "C:\\WndPro\\WindowPrograming\\Project1\\Project1-1\\Project 3.cpp",
+              "RelativeToolTip": "Project1-1\\Project 3.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwCQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-19T00:46:41.608Z",
               "EditorCaption": ""
             }
           ]
