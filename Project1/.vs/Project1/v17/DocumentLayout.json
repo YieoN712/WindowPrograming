@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Project1-1\\Project 1.cpp",
               "ToolTip": "C:\\WndPro\\WindowPrograming\\Project1\\Project1-1\\Project 1.cpp",
               "RelativeToolTip": "Project1-1\\Project 1.cpp",
-              "ViewState": "AgIAABkAAAAAAAAAAAAuwCUAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwDMAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-19T00:33:47.636Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "Project1-1\\Project 2.cpp",
               "ViewState": "AgIAABsAAAAAAAAAAAAuwCMAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-19T00:38:31.676Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T00:38:31.676Z"
             },
             {
               "$type": "Document",
@@ -58,10 +57,9 @@
               "RelativeDocumentMoniker": "Project1-1\\Project 3.cpp",
               "ToolTip": "C:\\WndPro\\WindowPrograming\\Project1\\Project1-1\\Project 3.cpp",
               "RelativeToolTip": "Project1-1\\Project 3.cpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAuwCQAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-19T00:46:41.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T00:46:41.608Z"
             }
           ]
         }

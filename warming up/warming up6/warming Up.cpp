@@ -14,8 +14,7 @@ char board[row][col];
 char original[row][col];
 int curX = 0, curY = 0;
 std::string word[5] = { "computer", "engineering", "software", "spring", "programing" };
-char target = ' ';
-std::string tWord;
+std::string tWord, findWord;
 
 void gotoxy(int x, int y);
 void setColor(int color);
@@ -45,6 +44,25 @@ int main()
 			}
 		}
 
+		if (tWord == findWord) {
+			std::cout << "1. restart 2.end\ncommand: ";
+			command = _getch();
+			if (command == '1') {
+				start = 0;
+				resetBoard();
+				shuffle();
+				continue;
+			}
+			else if (command == '2') {
+				ending();
+				break;
+			}
+			else {
+				std::cout << "wrong command\n";
+				continue;
+			}
+		}
+
 		std::cout << "command: ";
 		command = _getch();
 
@@ -53,13 +71,6 @@ int main()
 		}
 		else if (command == '\r') {
 			selectChar();
-		}
-		else if (command == '5') {
-			shuffle();
-		}
-		else if (command == '9') {
-			resetBoard();
-			printBoard();
 		}
 		else if (command == '0') {
 			std::cout << "game exit\n\n";
@@ -101,6 +112,8 @@ void resetBoard() {
 		}
 	}
 
+	findWord.erase();
+	tWord.erase();
 	std::memcpy(original, board, sizeof(board));
 }
 
@@ -138,7 +151,7 @@ void printBoard() {
 	}
 
 	for (int i = 0; i < tWord.size(); i++) {
-		std::cout << "*";
+		std::cout << findWord[i];
 	}
 	std::cout << "\n";
 }
@@ -179,15 +192,17 @@ void move(char c) {
 }
 
 void selectChar() {
-	if (target == ' ') return;
-
-	if (board[curX][curY] == target) {
-		board[curX][curY] = 'O';
-		printBoard();
+	for (int i = 0;i < tWord.size(); i++) {
+		if (board[curX][curY] == tWord[i]) {
+			board[curX][curY] = 'O';
+			findWord[i] = tWord[i];
+			break;
+		}
+		else {
+			std::cout << "\a";
+		}
 	}
-	else {
-		std::cout << "\a";
-	}
+	printBoard();
 }
 
 void shuffle() {
@@ -221,14 +236,6 @@ void shuffle() {
 void ending() {
 	system("cls");
 
-	std::cout << "target: ";
-	if (target != ' ') {
-		setColor(10);
-		std::cout << target;
-		setColor(7);
-	}
-	std::cout << "\n\n";
-
 	for (int r = 0; r < row; r++) {
 		for (int c = 0; c < col; c++) {
 			if (board[r][c] == 'O') {
@@ -243,6 +250,13 @@ void ending() {
 		std::cout << '\n';
 	}
 
+	setColor(9);
+	for (int i = 0; i < tWord.size(); i++) {
+		std::cout << findWord[i];
+	}
+	setColor(7);
+	std::cout << "\n";
+
 	setColor(14);
 	std::cout << "\nCLEAR!!!!\n";
 	setColor(7);
@@ -250,4 +264,8 @@ void ending() {
 
 void chooseWord(int dir) {
 	tWord = word[dir - 1];
+
+	for (int i = 0; i < tWord.size();i++) {
+		findWord += '*';
+	}
 }

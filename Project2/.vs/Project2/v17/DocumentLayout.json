@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\WndPro\\WindowPrograming\\Project2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{46138EC2-61A3-47C1-8DDD-099B7C5403F0}|Project2-3\\Project2-3.vcxproj|C:\\WndPro\\WindowPrograming\\Project2\\Project2-3\\Project2-3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{46138EC2-61A3-47C1-8DDD-099B7C5403F0}|Project2-3\\Project2-3.vcxproj|solutionrelative:Project2-3\\Project2-3.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC979D2E-875D-4551-8729-A3E333605E56}|Project2-2\\Project2-2.vcxproj|C:\\WndPro\\WindowPrograming\\Project2\\Project2-2\\Project2-2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FC979D2E-875D-4551-8729-A3E333605E56}|Project2-2\\Project2-2.vcxproj|solutionrelative:Project2-2\\Project2-2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C91DEA6-96CC-4ECE-9AA3-EB771BA590F5}|Project2-1\\Project2-1.vcxproj|C:\\WndPro\\WindowPrograming\\Project2\\Project2-1\\Project2-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4C91DEA6-96CC-4ECE-9AA3-EB771BA590F5}|Project2-1\\Project2-1.vcxproj|solutionrelative:Project2-1\\Project2-1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Project2-1.cpp",
+              "DocumentMoniker": "C:\\WndPro\\WindowPrograming\\Project2\\Project2-1\\Project2-1.cpp",
+              "RelativeDocumentMoniker": "Project2-1\\Project2-1.cpp",
+              "ToolTip": "C:\\WndPro\\WindowPrograming\\Project2\\Project2-1\\Project2-1.cpp",
+              "RelativeToolTip": "Project2-1\\Project2-1.cpp",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAAEsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-24T04:26:21.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Project2-2.cpp",
+              "DocumentMoniker": "C:\\WndPro\\WindowPrograming\\Project2\\Project2-2\\Project2-2.cpp",
+              "RelativeDocumentMoniker": "Project2-2\\Project2-2.cpp",
+              "ToolTip": "C:\\WndPro\\WindowPrograming\\Project2\\Project2-2\\Project2-2.cpp",
+              "RelativeToolTip": "Project2-2\\Project2-2.cpp",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAE8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-24T04:41:10.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Project2-3.cpp",
+              "DocumentMoniker": "C:\\WndPro\\WindowPrograming\\Project2\\Project2-3\\Project2-3.cpp",
+              "RelativeDocumentMoniker": "Project2-3\\Project2-3.cpp",
+              "ToolTip": "C:\\WndPro\\WindowPrograming\\Project2\\Project2-3\\Project2-3.cpp",
+              "RelativeToolTip": "Project2-3\\Project2-3.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-24T05:54:38.308Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
