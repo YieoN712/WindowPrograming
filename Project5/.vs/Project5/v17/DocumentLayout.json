@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\WndPro\\WindowPrograming\\Project5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{65887959-8E47-406C-82B8-C66CE948D5D2}|2-14\\2-14.vcxproj|C:\\WndPro\\WindowPrograming\\Project5\\2-14\\2-14.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{65887959-8E47-406C-82B8-C66CE948D5D2}|2-14\\2-14.vcxproj|solutionrelative:2-14\\2-14.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{179FEA0F-2CA4-4600-9C03-1D598EADACF6}|Project5-1\\Project5-1.vcxproj|C:\\WndPro\\WindowPrograming\\Project5\\Project5-1\\2-13.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{179FEA0F-2CA4-4600-9C03-1D598EADACF6}|Project5-1\\Project5-1.vcxproj|solutionrelative:Project5-1\\2-13.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 80,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "2-13.cpp",
+              "DocumentMoniker": "C:\\WndPro\\WindowPrograming\\Project5\\Project5-1\\2-13.cpp",
+              "RelativeDocumentMoniker": "Project5-1\\2-13.cpp",
+              "ToolTip": "C:\\WndPro\\WindowPrograming\\Project5\\Project5-1\\2-13.cpp",
+              "RelativeToolTip": "Project5-1\\2-13.cpp",
+              "ViewState": "AgIAABcBAAAAAAAAAAAkwD8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-08T07:29:52.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "2-14.cpp",
+              "DocumentMoniker": "C:\\WndPro\\WindowPrograming\\Project5\\2-14\\2-14.cpp",
+              "RelativeDocumentMoniker": "2-14\\2-14.cpp",
+              "ToolTip": "C:\\WndPro\\WindowPrograming\\Project5\\2-14\\2-14.cpp",
+              "RelativeToolTip": "2-14\\2-14.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-08T08:48:50.335Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 35,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

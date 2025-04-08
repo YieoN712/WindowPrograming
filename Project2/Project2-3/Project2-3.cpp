@@ -8,7 +8,8 @@ std::uniform_int_distribution<int> uid{ 2,10 };
 std::uniform_int_distribution<int> Alpha{ 2,26 };
 std::uniform_int_distribution<int> rgb{ 0,256 };
 
-RECT RectLocation(RECT, int, int);
+int n = 0, m = 0, k = 0;
+
 COLORREF ColorSet();
 
 HINSTANCE g_hInst;
@@ -56,32 +57,47 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 	HDC	hDC;
 	TCHAR temp[100];
 	RECT rect;
-	rect.left = 10;rect.right = 210;rect.top = 10;rect.bottom = 210;
-	int x = 0, y = 0, a = 0;
+
+	int cellWidth = rect.right / n;
+	int cellHeight = rect.bottom / m;
 
 	switch (iMessage)
 	{
 	case WM_CREATE:
-		x = uid(dre);
-		y = uid(dre);
-		a = Alpha(dre);
+		n = uid(dre);
+		m = uid(dre);
+		k = Alpha(dre);
 		break;
 
 	case WM_PAINT:
 		hDC = BeginPaint(hWnd, &ps);
 
-		//for (int i = 0; i < y; i++) {
-			//for (int j = 0; j < x; j++) {
-				for (int n = 0;n < a;n++) {
-					temp[n] = n + 97;
-				}
-				//rect = RectLocation(rect, j, i);
+		for (int row = 0; row < m; ++row) {
+			for (int col = 0; col < n; ++col) {
+				RECT rect;
+				rect.left = col * cellWidth;
+				rect.right = rect.left + cellWidth;
+				rect.top = row * cellHeight;
+				rect.bottom = rect.top + cellHeight;
 
-				SetTextColor(hDC, ColorSet());
-				SetBkColor(hDC, ColorSet());
-				DrawText(hDC, temp, _tcslen(temp), &rect, DT_WORDBREAK | DT_EDITCONTROL);
-			//}
-		//}
+				// 랜덤 문자열 생성 (a ~ a+k-1)
+				TCHAR temp[27];
+				for (int i = 0; i < k; ++i) {
+					temp[i] = 'a' + i;
+				}
+				temp[k] = '\0';
+
+				// 랜덤 색상
+				COLORREF textColor = ColorSet();
+				COLORREF bgColor = ColorSet();
+
+				SetTextColor(hDC, textColor);
+				SetBkColor(hDC, bgColor);
+				FillRect(hDC, &rect, CreateSolidBrush(bgColor));
+
+				DrawText(hDC, temp, k, &rect, DT_CENTER | DT_VCENTER | DT_WORDBREAK);
+			}
+		}
 
 		EndPaint(hWnd, &ps);
 		break;
@@ -92,15 +108,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 	}
 
 	return (DefWindowProc(hWnd, iMessage, wParam, lParam));
-}
-
-RECT RectLocation(RECT r, int x, int y) {
-	r.left = x * 100;
-	r.right = r.left + 100;
-	r.top = y * 300;
-	r.bottom = r.top + 300;
-
-	return r;
 }
 
 COLORREF ColorSet() {

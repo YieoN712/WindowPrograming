@@ -1,0 +1,30 @@
+﻿  MemoPad.cpp
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(68,16): warning C4244: 'return': 'WPARAM'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(99,13): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(108,22): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(111,22): warning C4244: '인수': 'WPARAM'에서 'wint_t'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(114,45): warning C4244: '인수': 'WPARAM'에서 'wint_t'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(119,17): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(129,18): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(158,33): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(187,14): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(191,14): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(195,14): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(199,14): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(254,13): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(299,13): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(280,7): warning C4996: '_itow': This function or variable may be unsafe. Consider using _itow_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(293,5): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(325,7): warning C4996: '_itow': This function or variable may be unsafe. Consider using _itow_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(337,5): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(351,4): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(381,20): warning C4996: '_wcstok': This function or variable may be unsafe. Consider using wcstok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(384,33): warning C4996: '_wcsupr': This function or variable may be unsafe. Consider using _wcsupr_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(385,6): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(386,14): warning C4996: '_wcstok': This function or variable may be unsafe. Consider using wcstok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(388,5): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(413,6): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(460,2): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(463,3): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\WndPro\WindowPrograming\MemoPad\MemoPad\MemoPad.cpp(465,2): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  MemoPad.vcxproj -> C:\WndPro\WindowPrograming\MemoPad\x64\Debug\MemoPad.exe
