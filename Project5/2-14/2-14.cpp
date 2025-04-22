@@ -56,7 +56,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdPa
 	WndClass.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
 	RegisterClassEx(&WndClass);
 
-	hWnd = CreateWindow(lpszClass, _T("실습 2-13 게임"), WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, (WINDOW_WIDTH + CELL_SIZE - 1), (WINDOW_HEIGHT + BOARD_SIZE - 1), NULL, NULL, hInstance, NULL);
+	hWnd = CreateWindow(lpszClass, _T("실습 2-14 게임"), WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, (WINDOW_WIDTH + CELL_SIZE - 1), (WINDOW_HEIGHT + BOARD_SIZE - 1), NULL, NULL, hInstance, NULL);
 
 	ShowWindow(hWnd, nCmdShow);
 	UpdateWindow(hWnd);
@@ -82,9 +82,16 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 	case WM_PAINT:
 		hDC = BeginPaint(hWnd, &ps);
 		DrawBoard(hDC);
-		for (auto& shape : shapes) {
-			DrawShape(hDC, shape);
+
+		for (int i = 0; i < shapes.size();++i) {
+			if (i != selectedIndex) {
+				DrawShape(hDC, shapes[i]);
+			}
 		}
+		if (selectedIndex != -1) {
+			DrawShape(hDC, shapes[selectedIndex]);
+		}
+
 		EndPaint(hWnd, &ps);
 		break;
 
