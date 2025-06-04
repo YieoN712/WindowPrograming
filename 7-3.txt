@@ -1,0 +1,238 @@
+#include <windows.h>
+#include <tchar.h>
+#include <wingdi.h>
+#include <vector>
+#include <string>
+#include "resource.h"
+
+#define IDC_SELECT                      1011
+#define IDC_MOVE                        1012
+#define IDC_STOP                        1013
+#define IDC_DONE                        1014
+#define IDC_LIST                        1015
+#define IDC_LEFT                        1016
+#define IDC_RIGHT                       1017
+#define IDC_EDIT                        1018
+
+HWND hBoard;std::vector<HBITMAP> images;
+int imageOrder[5];
+int imageCount = 0;
+int offset = 0;
+bool ismoveing = false;
+
+HANDLE RotateBitmap180(HANDLE, HDC);
+
+HINSTANCE g_hInst;
+LPCTSTR lpszClass = L"Window Class Name";
+LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
+LRESULT CALLBACK ChildProc(HWND, UINT, WPARAM, LPARAM);
+
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpszCmdParam, int nCmdShow)
+{
+	HWND hWnd;
+	MSG Message;
+	WNDCLASSEX WndClass;
+	g_hInst = hInstance;
+
+	WndClass.cbSize = sizeof WndClass;
+	WndClass.style = CS_HREDRAW | CS_VREDRAW;
+	WndClass.lpfnWndProc = (WNDPROC)WndProc;
+	WndClass.cbClsExtra = 0;
+	WndClass.cbWndExtra = 0;
+	WndClass.hInstance = hInstance;
+	WndClass.hIcon = LoadIcon(NULL, IDI_APPLICATION);
+	WndClass.hCursor = LoadCursor(NULL, IDC_ARROW);
+	WndClass.hbrBackground = (HBRUSH)GetStockObject(GRAY_BRUSH);
+	WndClass.lpszMenuName = NULL;
+	WndClass.lpszClassName = lpszClass;
+	WndClass.hIconSm = LoadIcon(NULL, IDI_APPLICATION);
+	RegisterClassEx(&WndClass);
+
+	WndClass.lpfnWndProc = ChildProc;
+	WndClass.lpszClassName = L"Board";
+	WndClass.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
+	RegisterClassEx(&WndClass);
+
+	hWnd = CreateWindow(lpszClass, _T("7-1"), WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, 900, 600, NULL, NULL, hInstance, NULL);
+
+	ShowWindow(hWnd, nCmdShow);
+	UpdateWindow(hWnd);
+
+	while (GetMessage(&Message, 0, 0, 0)) {
+		TranslateMessage(&Message);
+		DispatchMessage(&Message);
+	}
+
+	return Message.wParam;
+}
+
+LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
+{
+	HDC hDC, hMemDC;
+	static HWND hBtn[6], hList, hEdit;
+	RECT r = { 650,355,200,45 };
+	HANDLE hBit, hRotated;
+
+	switch (iMessage) {
+	case WM_CREATE:
+		hDC = GetDC(hWnd);
+		hMemDC = CreateCompatibleDC(hDC);
+
+		hBit = LoadImage(g_hInst, MAKEINTRESOURCE(IDB_BITMAP1), IMAGE_BITMAP, 30, 30, LR_CREATEDIBSECTION);
+		hRotated = RotateBitmap180(hBit, hDC);
+
+		hBoard = CreateWindow(TEXT("Board"), NULL,
+			WS_CHILD | WS_VISIBLE | WS_BORDER,
+			60, 50, 500, 500, hWnd, (HMENU)1, g_hInst, NULL);
+
+		hList = CreateWindow(TEXT("ListBox"), NULL,
+			WS_CHILD | WS_VISIBLE | WS_BORDER | LBS_STANDARD,
+			r.left, 50, r.right, 300, hWnd, (HMENU)IDC_LIST, g_hInst, NULL);
+
+		SendMessage(hList, LB_ADDSTRING, 0, (LPARAM)TEXT("Image 1"));
+		SendMessage(hList, LB_ADDSTRING, 0, (LPARAM)TEXT("Image 2"));
+		SendMessage(hList, LB_ADDSTRING, 0, (LPARAM)TEXT("Image 3"));
+		SendMessage(hList, LB_ADDSTRING, 0, (LPARAM)TEXT("Image 4"));
+		SendMessage(hList, LB_ADDSTRING, 0, (LPARAM)TEXT("Image 5"));
+
+		{
+			hBtn[0] = CreateWindow(TEXT("button"), TEXT("SELECT"),
+				WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+				r.left, r.top, r.right, r.bottom, hWnd, (HMENU)IDC_SELECT, g_hInst, NULL);
+			hBtn[1] = CreateWindow(TEXT("button"), TEXT("MOVE"),
+				WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+				r.left, r.top + 50, r.right, r.bottom, hWnd, (HMENU)IDC_MOVE, g_hInst, NULL);
+			hBtn[2] = CreateWindow(TEXT("button"), TEXT("STOP"),
+				WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+				r.left, r.top + 100, r.right, r.bottom, hWnd, (HMENU)IDC_STOP, g_hInst, NULL);
+			hBtn[3] = CreateWindow(TEXT("button"), TEXT("DONE"),
+				WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+				r.left, r.top + 150, r.right, r.bottom, hWnd, (HMENU)IDC_DONE, g_hInst, NULL);
+		}
+
+		{
+			hBtn[4] = CreateWindow(TEXT("button"), TEXT("L"),
+				WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON | BS_BITMAP,
+				20, 300, 30, 30, hWnd, (HMENU)IDC_LEFT, g_hInst, NULL);
+			SendMessage(hBtn[4], BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hBit);
+			hBtn[5] = CreateWindow(TEXT("button"), TEXT("R"),
+				WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON | BS_BITMAP,
+				570, 300, 30, 30, hWnd, (HMENU)IDC_RIGHT, g_hInst, NULL);
+			SendMessage(hBtn[5], BM_SETIMAGE, IMAGE_BITMAP, (LPARAM)hRotated);
+		}
+
+		hEdit = CreateWindow(TEXT("edit"), TEXT("EDIT"),
+			WS_CHILD | WS_VISIBLE | WS_BORDER,
+			250, 10, 100, 30, hWnd, (HMENU)IDC_EDIT, g_hInst, NULL);
+		break;
+
+	case WM_COMMAND:
+		switch (LOWORD(wParam)) {
+		case IDC_SELECT:
+		{
+			int sel = SendMessage(hList, LB_GETCURSEL, 0, 0);
+			if (sel != LB_ERR and imageCount < 5) {
+				int idb[] = { 102,103,104,105,106 };
+				HBITMAP bmp = LoadBitmap(g_hInst, MAKEINTRESOURCE(idb[sel]));
+				images.push_back(bmp);
+				imageOrder[imageCount++] = images.size() - 1;
+				InvalidateRect(hBoard, NULL, TRUE);
+				SetWindowText(GetDlgItem(hWnd, IDC_EDIT), std::to_wstring(imageCount).c_str());
+			}
+			break;
+		}
+		case IDC_LEFT:
+			if (imageCount > 0) {
+				int temp = imageOrder[0];
+				for (int i = 0; i < imageCount - 1; ++i) {
+					imageOrder[i] = i + 1;
+				}
+				imageOrder[imageCount - 1] = temp;
+				InvalidateRect(hBoard, NULL, TRUE);
+			}
+			break;
+		case IDC_RIGHT:
+			if (imageCount > 0) {
+				int temp = imageOrder[imageCount - 1];
+				for (int i = imageCount - 1; i > 0; --i)
+					imageOrder[i] = imageOrder[i - 1];
+				imageOrder[0] = temp;
+				InvalidateRect(hBoard, NULL, TRUE);
+			}
+			break;
+		case IDC_MOVE:
+			SetTimer(hBoard, 1, 100, NULL);
+			ismoveing = true;
+			break;
+		case IDC_STOP:
+			KillTimer(hBoard, 1);
+			ismoveing = false;
+			break;
+		case IDC_DONE:
+			MessageBox(hWnd, TEXT("Done"), TEXT("OK"), MB_OK);
+			for (HBITMAP bmp : images) {
+				DeleteObject(bmp);
+			}
+			PostQuitMessage(0);
+			break;
+		}
+		break;
+
+	case WM_DESTROY:
+		for (HBITMAP bmp : images) {
+			DeleteObject(bmp);
+		}
+		PostQuitMessage(0);
+		break;
+	}
+	return DefWindowProc(hWnd, iMessage, wParam, lParam);
+}
+
+LRESULT CALLBACK ChildProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
+	HDC hDC, hMemDC;
+	PAINTSTRUCT ps;
+
+	switch (msg) {
+	case WM_TIMER:
+		offset = (offset + 5) % 500;
+		InvalidateRect(hWnd, NULL, TRUE);
+		break;
+	case WM_PAINT:
+		hDC = BeginPaint(hWnd, &ps);
+
+		for (int i = 0; i < imageCount; ++i) {
+			hMemDC = CreateCompatibleDC(hDC);
+			SelectObject(hMemDC, images[imageOrder[i]]);
+			BitBlt(hDC, i * 500 - offset, 0, 500, 500, hMemDC, 0, 0, SRCCOPY);
+			DeleteDC(hMemDC);
+		}
+		// 60, 50, 500, 500
+		EndPaint(hWnd, &ps);
+		break;
+	case WM_DESTROY:
+		PostQuitMessage(0);
+		break;
+	}
+	return DefWindowProc(hWnd, msg, wParam, lParam);
+}
+
+HANDLE RotateBitmap180(HANDLE hBitmap, HDC hdc) {
+	BITMAP bmp;
+	GetObject(hBitmap, sizeof(BITMAP), &bmp);
+
+	HDC srcDC = CreateCompatibleDC(hdc);
+	HDC memDC = CreateCompatibleDC(hdc);
+
+	HBITMAP hRotated = CreateCompatibleBitmap(hdc, bmp.bmWidth, bmp.bmHeight);
+	SelectObject(srcDC, hBitmap);
+	SelectObject(memDC, hRotated);
+
+	StretchBlt(memDC, 0, 0, bmp.bmWidth, bmp.bmHeight,
+		srcDC, bmp.bmWidth - 1, bmp.bmHeight - 1,
+		-bmp.bmWidth, -bmp.bmHeight, SRCCOPY);
+
+	DeleteDC(srcDC);
+	DeleteDC(memDC);
+
+	return hRotated;
+}
